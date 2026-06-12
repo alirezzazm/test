@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#4f46e5">
+  <title>لیست کارها</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>✅ لیست کارها</h1>
+      <p class="subtitle" id="summary">امروز چه کاری انجام می‌دهید؟</p>
+    </header>
+
+    <form id="todo-form" class="todo-form" autocomplete="off">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="کار جدید را بنویسید…"
+        maxlength="200"
+        required
+      >
+      <button type="submit" aria-label="افزودن کار">＋</button>
+    </form>
+
+    <nav class="filters" aria-label="فیلتر کارها">
+      <button class="filter-btn active" data-filter="all">همه</button>
+      <button class="filter-btn" data-filter="active">در انتظار</button>
+      <button class="filter-btn" data-filter="done">انجام‌شده</button>
+    </nav>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <p id="empty-state" class="empty-state">هنوز کاری اضافه نکرده‌اید 🌱</p>
+
+    <footer class="app-footer">
+      <button id="clear-done" class="clear-btn" hidden>پاک کردن انجام‌شده‌ها</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
